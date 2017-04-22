@@ -34,7 +34,7 @@ export default class Albums extends React.Component{
   let keyword = this.refs.keyword.value;
 
   axios.get(`${API_URL}/search?type=album&q=${keyword}`).then(response => {
-    console.log(response.data);
+    console.log(response.data.albums.items[0]);
     this.setState({
       albums: response.data.albums.items
     });

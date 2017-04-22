@@ -27,6 +27,15 @@ export default class SingleArtist extends React.Component{
           <h1>
             {this.state.artist.name}
           </h1>
+
+          <h1>
+            TOP TRACKS
+          </h1>
+
+          <h1>
+          Albums
+          </h1>
+
         </div>
 
     )
