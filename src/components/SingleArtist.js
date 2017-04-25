@@ -6,7 +6,10 @@ export default class SingleArtist extends React.Component{
   constructor(props){
       super(props);
       this.state={
-        artist: {}
+        artist: {},
+        followers:0,
+        tracks:[],
+        albums:[]
       }
   }
 
@@ -15,18 +18,38 @@ export default class SingleArtist extends React.Component{
     axios.get(`${API_URL}/artists/${id}`).then(
       (response) => {
         this.setState({
-          artist:response.data
-        })
+          artist:response.data,followers:response.data.followers.data
+        });
+        console.log(response.data);
       }
-    )
+    );
+    axios.get(`${API_URL}/artists/${id}/top-tracks?country=SE`).then(
+      (response) => {
+        this.setState({
+          tracks:response.data
+        });
+        console.log(response.data.tracks[0].duration_ms);
+      }
+    );
+    axios.get(`${API_URL}/artists/${id}/albums`).then(
+      (response) => {
+        this.setState({
+          albums:response.data
+        });
+        console.log(response.data.items[0].images[0]);
+      }
+    );
   }
   render(){
-
     return(
         <div>
           <h1>
             {this.state.artist.name}
           </h1>
+
+          <p>
+            {this.state.followers}
+          </p>
 
           <h1>
             TOP TRACKS
