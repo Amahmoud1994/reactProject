@@ -20,7 +20,7 @@ export default class SingleArtist extends React.Component{
         this.setState({
           artist:response.data,followers:response.data.followers.data
         });
-        console.log(response.data);
+        console.log(response.data.images[0].url);
       }
     );
     axios.get(`${API_URL}/artists/${id}/top-tracks?country=SE`).then(
@@ -28,7 +28,7 @@ export default class SingleArtist extends React.Component{
         this.setState({
           tracks:response.data
         });
-        console.log(response.data.tracks[0].duration_ms);
+        // console.log(response.data.tracks[0].duration_ms);
       }
     );
     axios.get(`${API_URL}/artists/${id}/albums`).then(
@@ -36,7 +36,7 @@ export default class SingleArtist extends React.Component{
         this.setState({
           albums:response.data
         });
-        console.log(response.data.items[0].images[0]);
+        // console.log(response.data.items[0].images[0]);
       }
     );
   }
@@ -48,7 +48,7 @@ export default class SingleArtist extends React.Component{
           </h1>
 
           <p>
-            {this.state.followers}
+            {this.state.followers} Followers
           </p>
 
           <h1>

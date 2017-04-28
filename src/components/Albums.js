@@ -1,7 +1,7 @@
 import React from 'react'
 import {API_URL} from '../App'
 import axios from 'axios';
-import AlbumList from './AlbumList'
+import ItemList from './ItemList'
 
 
 export default class Albums extends React.Component{
@@ -25,7 +25,7 @@ export default class Albums extends React.Component{
         <form className="inputForm" onSubmit={this.searchAlbums}>
 					<input className="inputField" ref="keyword" type="text" placeholder="Search..."/>
 				</form>
-        <AlbumList albums={this.state.albums}/>
+        <ItemList items={this.state.albums}/>
       </div>
     )
   }
