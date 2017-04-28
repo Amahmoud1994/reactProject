@@ -1,7 +1,8 @@
 import React from 'react'
 import {API_URL} from '../App'
 import axios from 'axios';
-import ItemList from './ItemList'
+// import ItemList from './ItemList'
+import ArtistList from './ArtistList'
 
 
 export default class Artists extends React.Component{
@@ -16,7 +17,6 @@ export default class Artists extends React.Component{
   }
   render(){
     return(
-
       <div>
         <div>
           <h1> Artists </h1>
@@ -25,7 +25,7 @@ export default class Artists extends React.Component{
         <form className="inputForm" onSubmit={this.searchArtists}>
 					<input className="inputField" ref="keyword" type="text" placeholder="Search..."/>
 				</form>
-        <ItemList items={this.state.artists}/>
+        <ArtistList artists={this.state.artists}/>
       </div>
     )
   }
