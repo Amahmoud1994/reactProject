@@ -2,6 +2,7 @@ import React from 'react'
 import {API_URL} from "../App"
 import axios from 'axios';
 import TrackList from "./TrackList"
+import ItemList from "./ItemList"
 
 export default class SingleArtist extends React.Component{
   constructor(props){
@@ -33,7 +34,7 @@ export default class SingleArtist extends React.Component{
     axios.get(`${API_URL}/artists/${id}/albums`).then(
       (response) => {
         this.setState({
-          albums:response.data
+          albums:response.data.items
         });
       }
     );
@@ -57,7 +58,7 @@ export default class SingleArtist extends React.Component{
           <h1>
           Albums
           </h1>
-
+          <ItemList items = {this.state.albums}/>
         </div>
 
     )
