@@ -11,7 +11,8 @@ export default class SingleArtist extends React.Component{
         artist: {},
         followers:0,
         tracks:[],
-        albums:[]
+        albums:[],
+        imageURL:null
       }
   }
 
@@ -20,7 +21,9 @@ export default class SingleArtist extends React.Component{
     axios.get(`${API_URL}/artists/${id}`).then(
       (response) => {
         this.setState({
-          artist:response.data,followers:response.data.followers.data
+          artist:response.data,
+          followers:response.data.followers.total,
+          imageURL: response.data.images[0].url
         });
       }
     );
@@ -40,15 +43,22 @@ export default class SingleArtist extends React.Component{
     );
   }
   render(){
+        // console.log(this.state.imageURL);
     return(
         <div>
+
+          <img src={this.state.imageURL}/>
+
+          <p className="followers">
+            {this.state.followers}  Followers
+          </p>
+
           <h1>
             {this.state.artist.name}
           </h1>
 
-          <p>
-            {this.state.followers} Followers
-          </p>
+          <button>FOLLOW </button>
+          <button>PLAY ALL </button>
 
           <h1>
             TOP TRACKS
