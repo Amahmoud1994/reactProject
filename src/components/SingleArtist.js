@@ -1,6 +1,7 @@
 import React from 'react'
 import {API_URL} from "../App"
 import axios from 'axios';
+import TrackList from "./TrackList"
 
 export default class SingleArtist extends React.Component{
   constructor(props){
@@ -20,15 +21,13 @@ export default class SingleArtist extends React.Component{
         this.setState({
           artist:response.data,followers:response.data.followers.data
         });
-        console.log(response.data.images[0].url);
       }
     );
     axios.get(`${API_URL}/artists/${id}/top-tracks?country=SE`).then(
       (response) => {
         this.setState({
-          tracks:response.data
+          tracks:response.data.tracks
         });
-        // console.log(response.data.tracks[0].duration_ms);
       }
     );
     axios.get(`${API_URL}/artists/${id}/albums`).then(
@@ -36,7 +35,6 @@ export default class SingleArtist extends React.Component{
         this.setState({
           albums:response.data
         });
-        // console.log(response.data.items[0].images[0]);
       }
     );
   }
@@ -54,6 +52,7 @@ export default class SingleArtist extends React.Component{
           <h1>
             TOP TRACKS
           </h1>
+          <TrackList tracks={this.state.tracks}/>
 
           <h1>
           Albums
