@@ -46,9 +46,11 @@ export default class App extends React.Component{
           <Route exact path="/" component = {Home} />
           <Route path="/artists" component = {Artists} />
           <Route path="/albums" component = {Albums} />
-          <Route path="/album/:id?" component = {SingleAlbum} />
           <Route path="/artist/:id?"
           render={(routeProps)=> <SingleArtist {...routeProps} playTrack={this.playTrack} />
+          } />
+          <Route path="/album/:id?"
+          render={(routeProps)=> <SingleAlbum {...routeProps} playTrack={this.playTrack} />
           } />
 
         </div>
