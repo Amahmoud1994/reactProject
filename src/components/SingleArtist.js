@@ -43,7 +43,6 @@ export default class SingleArtist extends React.Component{
     );
   }
   render(){
-        // console.log(this.state.imageURL);
     return(
         <div>
 
@@ -63,7 +62,7 @@ export default class SingleArtist extends React.Component{
           <h1>
             TOP TRACKS
           </h1>
-          <TrackList tracks={this.state.tracks}/>
+          <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
 
           <h1>
           Albums
