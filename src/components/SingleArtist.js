@@ -2,7 +2,7 @@ import React from 'react'
 import {API_URL} from "../App"
 import axios from 'axios';
 import TrackList from "./TrackList"
-import ItemList from "./ItemList"
+import AlbumList from "./AlbumList"
 
 export default class SingleArtist extends React.Component{
   constructor(props){
@@ -68,7 +68,7 @@ export default class SingleArtist extends React.Component{
           <h1>
           Albums
           </h1>
-          <ItemList items = {this.state.albums}/>
+          <AlbumList albums = {this.state.albums}/>
         </div>
 
     )

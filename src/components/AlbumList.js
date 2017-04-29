@@ -11,7 +11,6 @@ import {Link} from 'react-router-dom'
           <Link to={`/album/${album.id}`}>
           <img  className="itemImage" src = {album.images[0].url}/>
           <p>{album.name}</p>
-
           </Link>
           </li>
         )}
