@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
         <div>
         {props.items.map((item, i) =>
           <li key={i}>
-          <Link to={`/artist/${item.id}`}>
+          <Link to={`/album/${item.id}`}>
           <img  className="itemImage" src = {item.images[0].url}/>
           <p>{item.name}</p>
           </Link>

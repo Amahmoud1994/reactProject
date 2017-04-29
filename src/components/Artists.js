@@ -35,7 +35,7 @@ export default class Artists extends React.Component{
   let keyword = this.refs.keyword.value;
 
   axios.get(`${API_URL}/search?type=artist&q=${keyword}`).then(response => {
-    // console.log(response.data.artists.items.artists);
+    console.log(response.data.artists.items[0]);
     this.setState({
       artists: response.data.artists.items
     });

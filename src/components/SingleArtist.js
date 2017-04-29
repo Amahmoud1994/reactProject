@@ -43,6 +43,7 @@ export default class SingleArtist extends React.Component{
     );
   }
   render(){
+    console.log(this.state.albums);
     return(
         <div>
 
