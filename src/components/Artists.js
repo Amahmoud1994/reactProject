@@ -1,6 +1,7 @@
 import React from 'react'
 import {API_URL} from '../App'
 import axios from 'axios';
+import ItemList from './ItemList'
 import ArtistList from './ArtistList'
 
 
@@ -15,8 +16,8 @@ export default class Artists extends React.Component{
 
   }
   render(){
+    // console.log(this.state.artists);
     return(
-
       <div>
         <div>
           <h1> Artists </h1>
@@ -34,6 +35,7 @@ export default class Artists extends React.Component{
   let keyword = this.refs.keyword.value;
 
   axios.get(`${API_URL}/search?type=artist&q=${keyword}`).then(response => {
+    // console.log(response.data.artists.items.artists);
     this.setState({
       artists: response.data.artists.items
     });

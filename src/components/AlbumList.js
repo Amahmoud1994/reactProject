@@ -9,7 +9,9 @@ import {Link} from 'react-router-dom'
         {props.albums.map((album, i) =>
           <li key={i}>
           <Link to={`/album/${album.id}`}>
-          {album.name}
+          <img  className="itemImage" src = {album.images[0].url}/>
+          <p>{album.name}</p>
+
           </Link>
           </li>
         )}
