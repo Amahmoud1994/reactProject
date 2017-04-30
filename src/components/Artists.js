@@ -18,15 +18,18 @@ export default class Artists extends React.Component{
   render(){
     // console.log(this.state.artists);
     return(
-      <div>
-        <div>
-          <h1> Artists </h1>
+      <div className="homeContainer">
+        <div className="titleDiv">
+          <h1 className="pageTitle"> Search for artists </h1>
         </div>
 
         <form className="inputForm" onSubmit={this.searchArtists}>
 					<input className="inputField" ref="keyword" type="text" placeholder="Search..."/>
 				</form>
+
+        <div className="itemsContainer">
         <ArtistList artists={this.state.artists}/>
+        </div>
       </div>
     )
   }

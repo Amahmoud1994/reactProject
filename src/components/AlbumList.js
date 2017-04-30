@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom'
 
   function AlbumList(props){
     return(
-      <ul className="albumList">
+      <ul className="itemList">
 
-        <div>
+        <div className="imgNameContainer">
         {props.albums.map((album, i) =>
           <li key={i}>
           <Link to={`/album/${album.id}`}>
           <img  className="itemImage" src = {album.images[0].url}/>
-          <p>{album.name}</p>
+          <p className="itemName">{album.name}</p>
           </Link>
           </li>
         )}

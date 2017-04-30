@@ -17,15 +17,18 @@ export default class Albums extends React.Component{
   render(){
     return(
 
-      <div>
-        <div>
-          <h1> Albums </h1>
+      <div className="homeContainer">
+        <div className="titleDiv">
+          <h1 className="pageTitle"> Search for albums </h1>
         </div>
 
         <form className="inputForm" onSubmit={this.searchAlbums}>
 					<input className="inputField" ref="keyword" type="text" placeholder="Search..."/>
 				</form>
+
+        <div className="itemsContainer">
         <AlbumList albums={this.state.albums}/>
+        </div>
       </div>
     )
   }

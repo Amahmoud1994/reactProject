@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom'
         // console.log(props.artists[0].images[0].url);
 
     return(
-      <ul className="artistList">
+      <ul className="itemList">
 
-        <div>
+        <div className="imgNameContainer">
         {props.artists.map((artist, i) =>
           {
             const image = artist.images.length > 0 ? artist.images[0].url : "";
@@ -17,7 +17,7 @@ import {Link} from 'react-router-dom'
             <li key={i}>
             <Link to={`/artist/${artist.id}`}>
             <img  className="itemImage" src={image} />
-            <p>{artist.name}</p>
+            <p className="itemName">{artist.name}</p>
             </Link>
             </li>
           )

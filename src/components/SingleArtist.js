@@ -45,30 +45,36 @@ export default class SingleArtist extends React.Component{
   render(){
     console.log(this.state.albums);
     return(
-        <div>
+        <div className="singleArtistContainer">
 
-          <img src={this.state.imageURL}/>
+          <img className="artistImage" src={this.state.imageURL}/>
 
           <p className="followers">
             {this.state.followers}  Followers
           </p>
 
-          <h1>
+          <h1 className="artistName">
             {this.state.artist.name}
           </h1>
 
-          <button>FOLLOW </button>
-          <button>PLAY ALL </button>
+          <button className = "button">FOLLOW </button>
+          <button className = "button">PLAY ALL </button>
 
-          <h1>
-            TOP TRACKS
+          <h1 className="pageTitle">
+            Top Tracks
           </h1>
-          <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
 
-          <h1>
+          <div className="tracksContainer">
+          <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
+          </div>
+
+          <h1 className="pageTitle">
           Albums
           </h1>
+
+          <div className="itemsContainer">
           <AlbumList albums = {this.state.albums}/>
+          </div>
         </div>
 
     )

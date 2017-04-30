@@ -62,10 +62,12 @@ export default class App extends React.Component{
 
 function  Menu(props){
     return(
-        <ul>
+      <div className="menuContainer">
+        <ul className="menuList">
           <li> <Link to="/"> Home </Link></li>
           <li> <Link to="/artists"> Artists </Link></li>
           <li> <Link to="/albums"> Albums </Link></li>
         </ul>
+      </div>
     )
   }

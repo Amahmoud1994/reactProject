@@ -22,9 +22,14 @@ export default class Home extends React.Component{
 
   render(){
     return(
-      <div>
-        <h1> Top Artists </h1>
-        <ArtistList artists = {this.state.artists} />
+
+      <div className="homeContainer">
+        <div className="titleDiv">
+          <h1 className="pageTitle"> Top Artists </h1>
+        </div>
+        <div className="itemsContainer">
+          <ArtistList artists = {this.state.artists} />
+        </div>
       </div>
     )
   }
