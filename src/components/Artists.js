@@ -1,7 +1,6 @@
 import React from 'react'
 import {API_URL} from '../App'
 import axios from 'axios';
-import ItemList from './ItemList'
 import ArtistList from './ArtistList'
 
 
