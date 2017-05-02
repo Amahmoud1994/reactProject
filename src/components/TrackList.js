@@ -8,10 +8,14 @@ import React from 'react'
 
           <div className="singleTrack">
           {props.tracks.map((track, i) =>
-            <li key={i} onClick={()=> props.playTrack(props.tracks,i)}>
+            <ol key={i} onClick={()=> props.playTrack(props.tracks,i)}>
+            <p className="trackNumber">{i+1}.</p>
+            <div className="tracksNames">
             <p className="trackName">{track.name}</p>
+            </div>
             <p className="trackDuration">{track.duration_ms}</p>
-            </li>
+            <div className="clear"></div>
+            </ol>
           )}
           </div>
 

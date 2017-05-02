@@ -32,23 +32,27 @@ export default class SingleAlbum extends React.Component{
     return(
         <div className="singleAlbumContainer">
 
-        <img className="albumImage" src={this.state.album.images[0].url}/>
+          <div className="artistDetail">
 
-        <h1 className="albumName">
-          {this.state.album.name}
-        </h1>
+            <img className="albumImage" src={this.state.album.images[0].url}/>
 
-        <h1 className="albumArtistName">
-          {this.state.artists[0].name}
-        </h1>
+            <h1 className="albumName">
+              {this.state.album.name}
+            </h1>
 
-        <h4 className="albumTracks">
-          {this.state.album.tracks.total} tracks
-        </h4>
+            <h4 className="albumArtistName">
+              {this.state.artists[0].name}
+            </h4>
 
-        <Link to={`/artist/${this.state.artists[0].id}`}>
-        <button className = "button">ARTIST PROFILE </button>
-        </Link>
+            <h5 className="albumTracks">
+              {this.state.album.tracks.total} tracks
+            </h5>
+
+            <Link to={`/artist/${this.state.artists[0].id}`}>
+            <button className = "button">ARTIST PROFILE </button>
+            </Link>
+
+          </div>
 
 
         <TrackList tracks={this.state.album.tracks.items} playTrack={this.props.playTrack}/>
