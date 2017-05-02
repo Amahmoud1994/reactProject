@@ -27,3 +27,49 @@
   width: 200px;
   background-color: red;
 }
+.side-nav{
+  background-color: black;
+  width: 15%;
+  height: 100%;
+  float: left;
+  padding-left: 3%;
+  overflow: hidden;
+}
+
+.homeContainer{
+  background-color: #434343;
+  width: 100%;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+.homeContainer h1{
+  font-weight: bold;
+  color: white;
+  padding-bottom: 3%;
+}
+.itemsContainer{
+  display: inline-block;
+}
+.itemsContainer ul{
+  overflow: hidden;
+  display: inline-block;
+}
+
+.itemsContainer li{
+  /*display: inline-block;*/
+  width: 25%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  display: inline-block;
+}
+
+.itemsContainer img{
+  color: black;
+  /*padding-left: ;*/
+}
+
+.itemsContainer p{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

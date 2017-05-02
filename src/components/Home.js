@@ -24,7 +24,7 @@ export default class Home extends React.Component{
     return(
 
       <div className="homeContainer">
-        <div className="titleDiv">
+        <div>
           <h1 className="pageTitle"> Top Artists </h1>
         </div>
         <div className="itemsContainer">

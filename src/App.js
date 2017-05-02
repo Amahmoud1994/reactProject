@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import './App.css';
+import './foundation.css';
 import ReactPlayer from 'react-player';
 
 import Home from './components/Home';
@@ -42,7 +43,8 @@ export default class App extends React.Component{
       <BrowserRouter>
         <div>
         <Player nextTrack={this.nextTrack} prevTrack={this.prevTrack} current={this.state.queue[this.state.currentIndex]}/>
-          <Menu />
+          <Menu className="menuDiv"/>
+
           <Route exact path="/" component = {Home} />
           <Route path="/artists" component = {Artists} />
           <Route path="/albums" component = {Albums} />
@@ -60,13 +62,15 @@ export default class App extends React.Component{
   }
 }
 
+
 function  Menu(props){
     return(
       <div className="menuContainer">
-        <ul className="menuList">
-          <li> <Link to="/"> Home </Link></li>
-          <li> <Link to="/artists"> Artists </Link></li>
-          <li> <Link to="/albums"> Albums </Link></li>
+        <ul className="side-nav">
+          <li><Link to="/"> Home </Link></li>
+          <li><Link to="/artists"> Artists </Link></li>
+          <li><Link to="/albums"> Albums </Link></li>
+          <li><a href="#">Ahmed Wagdi</a></li>
         </ul>
       </div>
     )
