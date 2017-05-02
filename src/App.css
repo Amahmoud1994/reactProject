@@ -120,7 +120,10 @@
   width: 30%;
   border: 2px solid green;
   border-radius: 20px;
-
+  background-color:#2ebd59;
+}
+.artistDetail button:hover{
+  background-color:#219042;
 }
 .tracksContainer{
   float: right;
