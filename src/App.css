@@ -63,9 +63,9 @@
   display: inline-block;
 }
 
-.itemsContainer img{
-  color: black;
-  /*padding-left: ;*/
+.image-container:hover{
+    opacity: 0.6;
+    transition: opacity .2s;
 }
 
 .itemsContainer p{
@@ -73,3 +73,11 @@
   font-weight: bold;
   text-align: center;
 }
+
+.image-container{
+    padding-top: 100%;
+    background-color: #303030;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,.2);}
