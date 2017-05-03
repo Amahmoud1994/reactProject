@@ -172,3 +172,48 @@
   background-size: cover;
   background-position: 50% 25%;
 }
+.artistDetails{
+  padding-top: 26%;
+  padding-left: 1%;
+  display:list-item;
+}
+.followers{
+  color: white;
+  margin-bottom: 0rem;
+}
+.artistName{
+color: white;
+font-weight: bold;
+padding-bottom: 1%;
+font-size: 40px;
+margin-bottom: 0rem;
+
+}
+.followButton{
+  width: 8%;
+  height: 40px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: background-color .2s;
+  border-radius: 30px;
+  background-color:#2ebd59;
+  margin-right: 1%;
+  color: white;
+}
+.followButton:hover{
+  background-color:#219042;
+}
+.PlayAllButton{
+  width: 8%;
+  height: 40px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border: 1px solid #fff;
+  transition: background-color .2s;
+  border-radius: 30px;
+  background-color: rgba(0,0,0,.2);
+  color: white;
+}
+.PlayAllButton:hover{
+  background-color:black;
+}

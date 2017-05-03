@@ -54,12 +54,12 @@ export default class SingleArtist extends React.Component{
                 <p className="followers">
                   {this.state.followers}  Followers
                 </p>
-                <h1 className="artistName">
+                <p className="artistName">
                   {this.state.artist.name}
-                </h1>
+                </p>
 
-                <button className = "button">FOLLOW </button>
-                <button className = "button">PLAY ALL </button>
+                <button className = "followButton">FOLLOW </button>
+                <button className = "PlayAllButton">PLAY ALL </button>
               </div>
             </div>
           </div>
