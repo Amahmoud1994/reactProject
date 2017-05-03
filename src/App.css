@@ -267,6 +267,7 @@ margin-bottom: 0rem;
 }
 .sidebar{
   width: 200px;
+  height: 100%;
   background-color: rgba(0,0,0,.1);
   /*background: linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.9));*/
   padding: 30px;
@@ -274,6 +275,14 @@ margin-bottom: 0rem;
 }
 .main-menu{
   overflow: hidden;
+  height: 100%;
+
+}
+.active{
+  opacity: 1;
+}
+.sidebar__user{
+  padding-bottom: 5%;
 }
 .menu__item{
   font-weight: bold;

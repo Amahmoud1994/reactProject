@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom'
 import './App.css';
 import './foundation.css';
 import ReactPlayer from 'react-player';
+import { NavLink } from 'react-router-dom'
 
 import Home from './components/Home';
 import Artists from './components/Artists';
@@ -69,7 +70,11 @@ function  Menu(props){
         <div>
           <img className="logo" src="./images/spotify_logo.png" />
           <ul className="main-menu">
-            <li className="menu__item active"><Link to="/"> Home </Link></li>
+            <li className="active menu__item" >
+            <NavLink exact to="/"  activeStyle={{
+              fontWeight: 'bold',
+              color: 'white'
+            }}> Home </NavLink></li>
             <li className="menu__item"><Link to="/albums"> Albums </Link></li>
             <li className="menu__item"><Link to="/artists"> Artists </Link></li>
           </ul>
