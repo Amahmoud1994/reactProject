@@ -26,9 +26,10 @@
 
 
 .homeContainer{
-  width: 100%;
-  padding-left: 14%;
+  width: 86.5%;
   padding-top: 2%;
+  height: 100vh;
+  overflow: auto;
 }
 .homeContainer h1{
   font-weight: bold;
@@ -172,24 +173,37 @@
   background-position: 50% 18%;
 }
 .artistDetails{
-  padding-top: 28%;
-  padding-left: 1%;
+  padding-top: 30%;
+  /*padding-left: 1%;*/
   display:list-item;
 }
 .followers{
+  padding-left: 1%;
   color: white;
-  margin-bottom: 0rem;
+  margin-bottom: -1rem;
 }
 .artistName{
 color: white;
+padding-left: 1%;
+
 font-weight: bold;
 padding-bottom: 1%;
 font-size: 60px;
 font-family: helvetica neue;
-margin-bottom: 0rem;
+margin-bottom: -1rem;
+
+}
+.gradDiv{
+  /*background-color: black;*/
+  background: rgba(0, 0, 0, 0.2);
+  height: 120px;
+  /*opacity: 0.4;*/
+  width: 100%;
+  margin-top: -67px;
 
 }
 .followButton{
+
   width: 9%;
   height: 40px;
   letter-spacing: 2px;
@@ -198,6 +212,7 @@ margin-bottom: 0rem;
   border-radius: 30px;
   background-color:#2ebd59;
   margin-right: 1%;
+  margin-left: 1%;
   color: white;
 }
 .followButton:hover{
@@ -235,12 +250,12 @@ margin-bottom: 0rem;
 }
 
 .artistTracks{
-  height: 90vh;
+  height:90%;
   padding-bottom: 35%;
 
 }
 .artistAlbums{
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.2);
   padding-top: 3%;
 }
 .artistTrackList .singleTrack ol{
@@ -267,7 +282,8 @@ margin-bottom: 0rem;
 }
 .sidebar{
   width: 200px;
-  height: 100%;
+  height: 100vh;
+  overflow: auto;
   background-color: rgba(0,0,0,.1);
   /*background: linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.9));*/
   padding: 30px;
@@ -313,6 +329,7 @@ li a:focus{
 }
 
 .singleArtistContainer{
-  width: 100%;
-  padding-left: 14%;
+  width: 86.5%;
+  height: 100vh;
+  overflow: auto;
 }

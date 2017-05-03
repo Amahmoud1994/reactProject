@@ -60,6 +60,8 @@ export default class SingleArtist extends React.Component{
 
                 <button className = "followButton">FOLLOW </button>
                 <button className = "PlayAllButton">PLAY ALL </button>
+                <div className="gradDiv">
+                </div>
               </div>
             </div>
           </div>
