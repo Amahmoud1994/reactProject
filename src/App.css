@@ -326,6 +326,10 @@ li a:focus{
 }
 .sidebar__user{
   color: white;
+  position: fixed;
+  bottom:-40px;
+  width: 10%;
+  font-size: 20px;
 }
 
 .singleArtistContainer{
