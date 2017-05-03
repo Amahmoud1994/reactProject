@@ -65,13 +65,22 @@ export default class App extends React.Component{
 
 function  Menu(props){
     return(
-      <div className="menuContainer">
-        <ul className="side-nav">
-          <li><Link to="/"> Home </Link></li>
-          <li><Link to="/albums"> Albums </Link></li>
-          <li><Link to="/artists"> Artists </Link></li>
-          <li><a href="#">Ahmed Wagdi</a></li>
-        </ul>
-      </div>
+      <nav className="sidebar">
+        <div>
+          <img className="logo" src="./images/spotify_logo.png" />
+          <ul className="main-menu">
+            <li className="menu__item active"><Link to="/"> Home </Link></li>
+            <li className="menu__item"><Link to="/albums"> Albums </Link></li>
+            <li className="menu__item"><Link to="/artists"> Artists </Link></li>
+          </ul>
+        </div>
+
+      <div>
+        <a className="sidebar__user">
+          <i className="fa fa-user-o" aria-hidden="false"></i>
+          Ahmed Wagdi
+        </a>
+    </div>
+    </nav>
     )
   }

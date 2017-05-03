@@ -24,22 +24,10 @@
   to { transform: rotate(360deg); }
 }
 
-.player{
-  width: 200px;
-  background-color: red;
-}
-.side-nav{
-  background-color: black;
-  width: 15%;
-  height: 100%;
-  float: left;
-  padding-left: 3%;
-  overflow: hidden;
-}
 
 .homeContainer{
   width: 100%;
-  padding-left: 5%;
+  padding-left: 14%;
   padding-top: 2%;
 }
 .homeContainer h1{
@@ -257,4 +245,55 @@ margin-bottom: 0rem;
 }
 .artistTrackList .singleTrack ol:hover{
   background-color: rgba(0,0,0,.7);
+}
+
+.player{
+  width: 200px;
+  background-color: red;
+}
+
+.side-nav{
+  background-color: black;
+  width: 15%;
+  height: 100%;
+  float: left;
+  padding-left: 3%;
+  overflow: hidden;
+}
+.sidebar{
+  width: 200px;
+  background-color: rgba(0,0,0,.1);
+  /*background: linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.9));*/
+  padding: 30px;
+  float: left;
+}
+.main-menu{
+  overflow: hidden;
+}
+.menu__item{
+  font-weight: bold;
+}
+li a{
+  color: white;
+  opacity: 0.5;
+}
+li a:hover{
+  color: white;
+  opacity: 1;
+}
+li a:focus{
+  color: white;
+  opacity: 1;
+}
+.fa-user-o:before {
+    content: "\F007";
+}
+.fa {
+    display: inline-block;
+    padding-right: 4%;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+}
+.sidebar__user{
+  color: white;
 }
