@@ -73,7 +73,7 @@ export default class SingleArtist extends React.Component{
               Top Tracks
             </h1>
 
-            <div className="tracksContainer">
+            <div className="artistTrackList">
             <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
             </div>
           </div>
