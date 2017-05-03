@@ -143,11 +143,17 @@
 }
 .singleTrack ol{
   width: 600px;
+  padding-top: 1%;
 }
+
+.singleTrack ol:hover{
+  background-color: rgba(0,0,0,.7);
+}
+
 .trackNumber{
   float: left;
   color: gray;
-
+  padding-left: 1%;
 }
 .tracksNames{
   text-align: left;
@@ -162,7 +168,7 @@
 .trackDuration{
   float: right;
   color: gray;
-
+  padding-right: 2%;
 }
 .clear{
   clear: both;
@@ -232,10 +238,11 @@ margin-bottom: 0rem;
   font-weight: bold;
   padding-left: 2%;
   padding-bottom: 1%;
+  padding-top: 2%;
 }
 
 .artistTracks{
-  height: 500px;
+  height: 650%;
   padding-bottom: 35%;
 
 }
@@ -244,5 +251,10 @@ margin-bottom: 0rem;
   padding-top: 3%;
 }
 .artistTrackList .singleTrack ol{
-  width: 800px;
+  width: 1000px;
+  padding-top: 1%;
+
+}
+.artistTrackList .singleTrack ol:hover{
+  background-color: rgba(0,0,0,.7);
 }
