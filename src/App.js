@@ -68,8 +68,8 @@ function  Menu(props){
       <div className="menuContainer">
         <ul className="side-nav">
           <li><Link to="/"> Home </Link></li>
-          <li><Link to="/artists"> Artists </Link></li>
           <li><Link to="/albums"> Albums </Link></li>
+          <li><Link to="/artists"> Artists </Link></li>
           <li><a href="#">Ahmed Wagdi</a></li>
         </ul>
       </div>
