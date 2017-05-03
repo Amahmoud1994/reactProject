@@ -43,38 +43,52 @@ export default class SingleArtist extends React.Component{
     );
   }
   render(){
-    console.log(this.state.albums);
+
+    // console.log(this.state.imageURL);
+    const image = this.state.imageURL > 0 ? this.state.imageURL : "";
     return(
         <div className="singleArtistContainer">
+          <div className="artist">
+            <div className="artistImage" style={{backgroundImage: `url(${this.state.imageURL})`}}>
+              <div className="artistDetails">
+                <p className="followers">
+                  {this.state.followers}  Followers
+                </p>
+                <h1 className="artistName">
+                  {this.state.artist.name}
+                </h1>
 
-          <img className="artistImage" src={this.state.imageURL}/>
-
-          <p className="followers">
-            {this.state.followers}  Followers
-          </p>
-
-          <h1 className="artistName">
-            {this.state.artist.name}
-          </h1>
-
-          <button className = "button">FOLLOW </button>
-          <button className = "button">PLAY ALL </button>
-
-          <h1 className="pageTitle">
-            Top Tracks
-          </h1>
-
-          <div className="tracksContainer">
-          <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
+                <button className = "button">FOLLOW </button>
+                <button className = "button">PLAY ALL </button>
+              </div>
+            </div>
           </div>
 
-          <h1 className="pageTitle">
-          Albums
-          </h1>
 
-          <div className="itemsContainer">
-          <AlbumList albums = {this.state.albums}/>
+
+
+          <div className="artistTracks">
+
+            <h1 className="pageTitle">
+              Top Tracks
+            </h1>
+
+            <div className="tracksContainer">
+            <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
+            </div>
           </div>
+
+          <div className="artistAlbums">
+
+            <h1 className="pageTitle">
+            Albums
+            </h1>
+
+            <div className="itemsContainer">
+            <AlbumList albums = {this.state.albums}/>
+            </div>
+          </div>
+
         </div>
 
     )

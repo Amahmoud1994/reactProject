@@ -166,3 +166,9 @@
 .clear{
   clear: both;
 }
+.artistImage {
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  background-position: 50% 25%;
+}
