@@ -87,16 +87,17 @@
 }
 .artistDetail{
   float: left;
-  width: 36%;
+  width: 50%;
   text-align: center;
-  margin-left: 0%;
+  margin-left: -6%;
 }
 .artistDetail img{
   width: 55%;
 }
 
 .albumName{
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 26px;
   color: white;
 }
 
@@ -120,14 +121,13 @@
 }
 .tracksContainer{
   float: right;
-  padding-right: 20%;
   width: 45%;
 
 }
 .singleAlbumContainer{
   padding-top: 5%;
   height: 100vh;
-
+  overflow: auto;
 }
 .singleTrack{
   display: inline-block;

@@ -68,7 +68,7 @@ function  Menu(props){
     return(
       <nav className="sidebar">
         <div>
-          <img className="logo" src="./images/spotify_logo.png" />
+          <img className="logo" src={"./images/spotify_logo.png"} />
           <ul className="main-menu">
             <li className="active menu__item" >
             <NavLink exact to="/"  activeStyle={{

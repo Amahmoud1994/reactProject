@@ -36,9 +36,9 @@ export default class SingleAlbum extends React.Component{
 
             <img className="albumImage" src={this.state.album.images[0].url}/>
 
-            <h1 className="albumName">
+            <h2 className="albumName">
               {this.state.album.name}
-            </h1>
+            </h2>
 
             <h4 className="albumArtistName">
               {this.state.artists[0].name}
