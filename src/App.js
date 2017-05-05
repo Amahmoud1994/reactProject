@@ -4,7 +4,7 @@ import './App.css';
 import './foundation.css';
 import ReactPlayer from 'react-player';
 import { NavLink } from 'react-router-dom'
-
+import logo from "./images/spotify_logo.png"
 import Home from './components/Home';
 import Artists from './components/Artists';
 import Albums from './components/Albums';
@@ -68,7 +68,7 @@ function  Menu(props){
     return(
       <nav className="sidebar">
         <div>
-          <img className="logo" src={"./images/spotify_logo.png"} />
+          <img className="logo" src={logo} />
           <ul className="main-menu">
             <li className="active menu__item" >
             <NavLink exact to="/"  activeStyle={{
