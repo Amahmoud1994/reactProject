@@ -19,15 +19,11 @@ export default class Player extends React.Component{
   if (!this.props.current) {
     return null;
   }
-    // const image = this.props.current.album.images.length > 0 ? this.props.current.album.images[0].url : "";
-    console.log({content: !this.state.playing ?  "\F04B" : "\F04C"});
     var divStyle = {
       backgroundImage: `url(${this.props.current.album.images[0].url})`,
       height:"100%"
     };
-    console.log(this.props.current.artists[0].name);
-    console.log(this.props.current.album.images[0].url);
-    // {!this.state.playing?"Play" : "Pause"}
+    console.log(this);
     return(
 
       <div className="playerContainer">

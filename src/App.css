@@ -168,12 +168,12 @@
 }
 .artistImage {
   width: 100%;
-  height: 550px;
+  height: 450px;
   background-size: cover;
-  background-position: 50% 18%;
+  background-position: 50% 25%;
 }
 .artistDetails{
-  padding-top: 30%;
+  padding-top: 23%;
   /*padding-left: 1%;*/
   display:list-item;
 }
@@ -194,12 +194,10 @@ margin-bottom: -1rem;
 
 }
 .gradDiv{
-  /*background-color: black;*/
-  background: rgba(0, 0, 0, 0.2);
-  height: 120px;
-  /*opacity: 0.4;*/
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)); /* Standard syntax (must be last) */
+  height: 25vh;
   width: 100%;
-  margin-top: -67px;
+  margin-top: -13.3%;
 
 }
 .followButton{
@@ -255,7 +253,7 @@ margin-bottom: -1rem;
 
 }
 .artistAlbums{
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,.3);
   padding-top: 3%;
 }
 .artistTrackList .singleTrack ol{
@@ -279,8 +277,7 @@ margin-bottom: -1rem;
   width: 200px;
   height: 100vh;
   overflow: auto;
-  background-color: rgba(0,0,0,.1);
-  /*background: linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.9));*/
+  background-color: rgba(0,0,0,.5);
   padding: 30px;
   float: left;
 }
