@@ -264,7 +264,9 @@ margin-bottom: -1rem;
 .artistTrackList .singleTrack ol:hover{
   background-color: rgba(0,0,0,.7);
 }
-
+/*.artistTrackList .singleTrack ol:hover{
+  color: #219042;
+}*/
 .side-nav{
   background-color: black;
   width: 15%;
@@ -387,8 +389,15 @@ li a:focus{
   float: left;
   background: dimgray;
   border-radius: 30px;
-  overflow: hidden;
   margin-top: 10px;
+}
+.progressBarColor{
+  height: 5px;
+  background: red;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: -0px;
+  float: left;
 }
 .fa{
   display: inline-block;

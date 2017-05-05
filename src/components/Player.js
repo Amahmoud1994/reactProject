@@ -5,16 +5,19 @@ export default class Player extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      playing:true
+      playing:true,
+      progressWidth:0
     }
     this.togglePlay=this.togglePlay.bind(this);
+    this.handleProgress=this.handleProgress.bind(this);
   }
   togglePlay(){
     this.setState({playing:!this.state.playing});
   }
-  handleProgress(){
-    console.log("PROGRESS");
+  handleProgress(played){
+    this.setState({progressWidth:played.played*100});
   }
+
   render(){
   if (!this.props.current) {
     return null;
@@ -23,7 +26,6 @@ export default class Player extends React.Component{
       backgroundImage: `url(${this.props.current.album.images[0].url})`,
       height:"100%"
     };
-    console.log(this);
     return(
 
       <div className="playerContainer">
@@ -42,14 +44,16 @@ export default class Player extends React.Component{
           <a className="playerControlsButtons">
 
 
-          <i className={!this.state.playing ?  "fa fa-pause fa-2" : "fa fa-play fa-2"} onClick={this.togglePlay} >
+          <i className={!this.state.playing ?  "fa fa-play fa-2" : "fa fa-pause fa-2"} onClick={this.togglePlay} >
           </i>
           </a>
           </div>
 
           <div className="playerBar">
-            <h6 className="timeBegin">1</h6>
-            <div className="progressBar"></div>
+            <h6 className="timeBegin">{parseInt((this.state.progressWidth * 30)/100)}</h6>
+            <div className="progressBar">
+            <div className="progressBarColor" style={{width:`${this.state.progressWidth}%`}}></div>
+            </div>
             <h6 className="timeEnd">30</h6>
           </div>
         </div>
