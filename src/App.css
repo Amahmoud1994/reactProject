@@ -267,11 +267,6 @@ margin-bottom: -1rem;
   background-color: rgba(0,0,0,.7);
 }
 
-.player{
-  width: 200px;
-  background-color: red;
-}
-
 .side-nav{
   background-color: black;
   width: 15%;
@@ -336,4 +331,82 @@ li a:focus{
   width: 86.5%;
   height: 100vh;
   overflow: auto;
+
+}
+
+.playerContainer{
+  width: 100%;
+  background: #252525;
+  color: white;
+  position: fixed;
+  bottom:0;
+  z-index: 10;
+  display: inline-block;
+  padding-left: 2%;
+  padding-top: 1%;
+}
+.trackImage{
+  width: 50px;
+  margin-right: 10px;
+  height: 50px;
+  float: left;
+}
+.playerImage{
+  padding-top: 100%;
+  transform: scale(1);
+  background-color: #303030;
+  background-size: cover;
+  background-position: 50%;
+  margin-bottom: 10px;
+  position: relative;
+  transition: transform .2s,box-shadow .2s,-webkit-transform .2s;
+  box-shadow: 0 0 25px rgba(0,0,0,.2);
+}
+.playerArtist{
+  float: left;
+  width: 30%
+}
+.trackPlaying{
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+}
+.player{
+  display: block;
+}
+.timeBegin{
+  float: left;
+  width: 1%;
+}
+.timeEnd{
+  float: left;
+  width: 1%;
+}
+
+.progressBar{
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 600px;
+  height: 5px;
+  float: left;
+  background: dimgray;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.fa{
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+}
+.fa-play:before {
+    content: "\F04B";
+}
+.fa-2{
+  font-size: 1.5em;
+}
+.fa-pause:before {
+    content: "\F04C";
+}
+.playerControlsButtons{
+  padding-left: 25%;
 }
