@@ -399,7 +399,7 @@ li a:focus{
 }
 .progressBarColor{
   height: 5px;
-  background: red;
+  background: green;
   border-radius: 30px;
   overflow: hidden;
   margin-top: -0px;
