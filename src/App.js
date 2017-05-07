@@ -44,7 +44,7 @@ export default class App extends React.Component{
     return(
       <BrowserRouter>
         <div>
-        <Player nextTrack={this.nextTrack} prevTrack={this.prevTrack} current={this.state.queue[this.state.currentIndex]}/>
+        <Player nextTrack={this.nextTrack} prevTrack={this.prevTrack} current={this.state.queue[this.state.currentIndex]} imageURL={this.state.imageURL}/>
           <Menu className="menuDiv"/>
 
           <Route exact path="/" component = {Home} />

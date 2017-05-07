@@ -1,7 +1,7 @@
 import React from 'react'
 
   function TrackList(props){
-    // console.log(props.tracks);
+    // console.log(props.imageURL);
     return(
       <div className="tracksContainer">
         <ul className="trackList">

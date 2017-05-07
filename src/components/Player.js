@@ -22,7 +22,7 @@ export default class Player extends React.Component{
   }
 
   render(){
-    console.log(this.props.imageURL);
+    console.log(this.props);
     if (!this.props.current) {
       return null;
     }
