@@ -20,15 +20,16 @@ export default class App extends React.Component{
     super(props);
     this.state={
       queue: [],
-      currentIndex:null
+      currentIndex:null,
+      imageURL:""
     }
     this.playTrack=this.playTrack.bind(this);
     this.nextTrack=this.nextTrack.bind(this);
     this.prevTrack=this.prevTrack.bind(this);
   }
 
-  playTrack(tracks,index){
-    this.setState({queue: tracks,currentIndex:index});
+  playTrack(tracks,index,imageUrl){
+    this.setState({queue: tracks,currentIndex:index,imageURL:imageUrl});
   }
 
   nextTrack(){
@@ -39,7 +40,7 @@ export default class App extends React.Component{
   }
 
   render(){
-    console.log(this.state.queue);
+    // console.log(this.state.queue);
     return(
       <BrowserRouter>
         <div>

@@ -43,8 +43,9 @@ export default class SingleArtist extends React.Component{
     );
   }
   render(){
+    // console.log("Single Artist Page ");
+    // console.log(this.props);
 
-    // console.log(this.state.imageURL);
     const image = this.state.imageURL > 0 ? this.state.imageURL : "";
     return(
         <div className="singleArtistContainer">
@@ -76,7 +77,7 @@ export default class SingleArtist extends React.Component{
             </h1>
 
             <div className="artistTrackList">
-            <TrackList tracks={this.state.tracks} playTrack={this.props.playTrack}/>
+            <TrackList tracks={this.state.tracks} imageURL={image} playTrack={this.props.playTrack}/>
             </div>
           </div>
 

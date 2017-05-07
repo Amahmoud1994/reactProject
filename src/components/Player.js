@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import {API_URL} from "../App";
+import axios from 'axios';
 
 export default class Player extends React.Component{
   constructor(props){
     super(props);
     this.state={
       playing:true,
-      progressWidth:0
+      progressWidth:0,
+      artistImage:""
     }
     this.togglePlay=this.togglePlay.bind(this);
     this.handleProgress=this.handleProgress.bind(this);
@@ -19,13 +22,15 @@ export default class Player extends React.Component{
   }
 
   render(){
-  if (!this.props.current) {
-    return null;
-  }
+    console.log(this.props.imageURL);
+    if (!this.props.current) {
+      return null;
+    }
     var divStyle = {
-      backgroundImage: `url(${this.props.current.album.images[0].url})`,
+      backgroundImage: `url(${this.props.imageURL})`,
       height:"100%"
     };
+
     return(
 
       <div className="playerContainer">

@@ -19,7 +19,7 @@ export default class SingleAlbum extends React.Component{
       (response) => {
         this.setState({
           album:response.data,artists:response.data.artists
-        })
+        });
       }
     )
   }
@@ -28,7 +28,10 @@ export default class SingleAlbum extends React.Component{
     if (!this.state.artists[0]) {
       return null;
     }
-    console.log(this.state.album);
+    // console.log("Single Album Page ");
+    // console.log(this.state.album.tracks);
+
+
     return(
         <div className="singleAlbumContainer">
 
@@ -55,7 +58,7 @@ export default class SingleAlbum extends React.Component{
           </div>
 
 
-        <TrackList tracks={this.state.album.tracks.items} playTrack={this.props.playTrack}/>
+        <TrackList tracks={this.state.album.tracks.items} imageURL={this.state.album.images[0].url} playTrack={this.props.playTrack}/>
 
 
         </div>

@@ -144,9 +144,11 @@
   padding-top: 1%;
 }
 
+
 .singleTrack ol:hover{
   background-color: rgba(0,0,0,.7);
 }
+
 
 .trackNumber{
   float: left;
